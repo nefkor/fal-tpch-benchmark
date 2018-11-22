@@ -18,11 +18,6 @@ nohup gsutil -m  cp *.dat gs://aol-temp/gendata1000 &
 
 
 
-
-nohup sudo ./dbgen -s 100 -v Y -f -dir /mnt/data_in/tmp100 &
-
-
-
 ----------
 sudo apt-get update
 sudo apt-get -y --force-yes install gcc make flex bison byacc git

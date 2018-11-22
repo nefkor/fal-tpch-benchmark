@@ -9,6 +9,8 @@ create table aol_tpch100.part (
 	p_container		string,
 	p_retailprice	float64,
 	p_comment		string
+,
+    end_line                  STRING
 );
 
 create table aol_tpch100.supplier (
@@ -19,6 +21,8 @@ create table aol_tpch100.supplier (
 	s_phone			string,
 	s_acctbal		float64,
 	s_comment		string
+,
+    end_line                  STRING
 );
 
 create table aol_tpch100.partsupp (
@@ -27,6 +31,8 @@ create table aol_tpch100.partsupp (
 	ps_availqty		int64,
 	ps_supplycost	float64,
 	ps_comment		string
+,
+    end_line                  STRING
 );
 
 create table aol_tpch100.customer (
@@ -38,6 +44,8 @@ create table aol_tpch100.customer (
 	c_acctbal		float64,
 	c_mktsegment	string,
 	c_comment		string
+,
+    end_line                  STRING
 );
 
 create table aol_tpch100.orders (
@@ -50,6 +58,8 @@ create table aol_tpch100.orders (
 	o_clerk			string,
 	o_shippriority	int64,
 	o_comment		string
+,
+    end_line                  STRING
 );
 
 create table aol_tpch100.lineitem (
@@ -69,6 +79,8 @@ create table aol_tpch100.lineitem (
 	l_shipinstruct	STRING,
 	l_shipmode		STRING,
 	l_comment		STRING
+,
+    end_line                  STRING
 );
 
 create table aol_tpch100.nation (
@@ -76,10 +88,14 @@ create table aol_tpch100.nation (
 	n_name			string,
 	n_regionkey		int64 not null,  -- references r_regionkey
 	n_comment		string
+,
+    end_line                  STRING
 );
 
 create table aol_tpch100.region (
 	r_regionkey	int64,
 	r_name		string,
 	r_comment	string
+,
+    end_line                  STRING
 );
