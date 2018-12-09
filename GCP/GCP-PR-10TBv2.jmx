@@ -207,7 +207,7 @@
             <hashTree/>
           </hashTree>
           <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While JobComplete == False " enabled="true">
-            <stringProp name="WhileController.condition">${__javaScript(&quot;${jobComplete}&quot; == &quot;true&quot;,)}</stringProp>
+            <stringProp name="WhileController.condition">${__javaScript(&quot;${jobComplete}&quot; == &quot;false&quot;,)}</stringProp>
           </WhileController>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request JobID Q1" enabled="true">
@@ -334,7 +334,7 @@
             <hashTree/>
           </hashTree>
           <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While JobComplete == False " enabled="true">
-            <stringProp name="WhileController.condition">${__javaScript(&quot;${jobComplete}&quot; == &quot;true&quot;,)}</stringProp>
+            <stringProp name="WhileController.condition">${__javaScript(&quot;${jobComplete}&quot; == &quot;false&quot;,)}</stringProp>
           </WhileController>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request JobID Q2" enabled="true">
@@ -588,7 +588,7 @@
             <hashTree/>
           </hashTree>
           <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While JobComplete == False " enabled="true">
-            <stringProp name="WhileController.condition">${__javaScript(&quot;${jobComplete}&quot; == &quot;true&quot;,)}</stringProp>
+            <stringProp name="WhileController.condition">${__javaScript(&quot;${jobComplete}&quot; == &quot;false&quot;,)}</stringProp>
           </WhileController>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request JobID Q4" enabled="true">
@@ -715,7 +715,7 @@
             <hashTree/>
           </hashTree>
           <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While JobComplete == False " enabled="true">
-            <stringProp name="WhileController.condition">${__javaScript(&quot;${jobComplete}&quot; == &quot;true&quot;,)}</stringProp>
+            <stringProp name="WhileController.condition">${__javaScript(&quot;${jobComplete}&quot; == &quot;false&quot;,)}</stringProp>
           </WhileController>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request JobID Q5" enabled="true">
@@ -842,7 +842,7 @@
             <hashTree/>
           </hashTree>
           <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While JobComplete == False " enabled="true">
-            <stringProp name="WhileController.condition">${__javaScript(&quot;${jobComplete}&quot; == &quot;true&quot;,)}</stringProp>
+            <stringProp name="WhileController.condition">${__javaScript(&quot;${jobComplete}&quot; == &quot;false&quot;,)}</stringProp>
           </WhileController>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request JobID Q6" enabled="true">
@@ -969,7 +969,7 @@
             <hashTree/>
           </hashTree>
           <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While JobComplete == False " enabled="true">
-            <stringProp name="WhileController.condition">${__javaScript(&quot;${jobComplete}&quot; == &quot;true&quot;,)}</stringProp>
+            <stringProp name="WhileController.condition">${__javaScript(&quot;${jobComplete}&quot; == &quot;false&quot;,)}</stringProp>
           </WhileController>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request JobID Q7" enabled="true">
@@ -1096,7 +1096,7 @@
             <hashTree/>
           </hashTree>
           <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While JobComplete == False " enabled="true">
-            <stringProp name="WhileController.condition">${__javaScript(&quot;${jobComplete}&quot; == &quot;true&quot;,)}</stringProp>
+            <stringProp name="WhileController.condition">${__javaScript(&quot;${jobComplete}&quot; == &quot;false&quot;,)}</stringProp>
           </WhileController>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request JobID Q8" enabled="true">
@@ -1223,7 +1223,7 @@
             <hashTree/>
           </hashTree>
           <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While JobComplete == False " enabled="true">
-            <stringProp name="WhileController.condition">${__javaScript(&quot;${jobComplete}&quot; == &quot;true&quot;,)}</stringProp>
+            <stringProp name="WhileController.condition">${__javaScript(&quot;${jobComplete}&quot; == &quot;false&quot;,)}</stringProp>
           </WhileController>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request JobID Q9" enabled="true">
@@ -1350,7 +1350,7 @@
             <hashTree/>
           </hashTree>
           <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While JobComplete == False " enabled="true">
-            <stringProp name="WhileController.condition">${__javaScript(&quot;${jobComplete}&quot; == &quot;true&quot;,)}</stringProp>
+            <stringProp name="WhileController.condition">${__javaScript(&quot;${jobComplete}&quot; == &quot;false&quot;,)}</stringProp>
           </WhileController>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request JobID Q10" enabled="true">
@@ -1477,7 +1477,7 @@
             <hashTree/>
           </hashTree>
           <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While JobComplete == False " enabled="true">
-            <stringProp name="WhileController.condition">${__javaScript(&quot;${jobComplete}&quot; == &quot;true&quot;,)}</stringProp>
+            <stringProp name="WhileController.condition">${__javaScript(&quot;${jobComplete}&quot; == &quot;false&quot;,)}</stringProp>
           </WhileController>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request JobID Q11" enabled="true">
@@ -1604,7 +1604,7 @@
             <hashTree/>
           </hashTree>
           <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While JobComplete == False " enabled="true">
-            <stringProp name="WhileController.condition">${__javaScript(&quot;${jobComplete}&quot; == &quot;true&quot;,)}</stringProp>
+            <stringProp name="WhileController.condition">${__javaScript(&quot;${jobComplete}&quot; == &quot;false&quot;,)}</stringProp>
           </WhileController>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request JobID Q12" enabled="true">
