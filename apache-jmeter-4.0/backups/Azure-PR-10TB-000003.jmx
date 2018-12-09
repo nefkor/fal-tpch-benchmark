@@ -20,17 +20,17 @@
           </elementProp>
           <elementProp name="THREADS" elementType="Argument">
             <stringProp name="Argument.name">THREADS</stringProp>
-            <stringProp name="Argument.value">250</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="ITERATIONS" elementType="Argument">
             <stringProp name="Argument.name">ITERATIONS</stringProp>
-            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.value">3</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="RAMP_UP" elementType="Argument">
             <stringProp name="Argument.name">RAMP_UP</stringProp>
-            <stringProp name="Argument.value">100</stringProp>
+            <stringProp name="Argument.value">20</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="USERNAME" elementType="Argument">
@@ -120,7 +120,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename"></stringProp>
+        <stringProp name="filename">/Users/alanolivares/Documents/Desarrollos/loadData/Power Run/results-dwh-pw-10tb.jtl</stringProp>
       </ResultCollector>
       <hashTree/>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
@@ -222,7 +222,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
           </JSR223Sampler>
           <hashTree>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ1</stringProp>
               <stringProp name="query">DBCC FREEPROCCACHE WITH NO_INFOMSGS;</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -234,7 +234,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             </JDBCPostProcessor>
             <hashTree/>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ1</stringProp>
               <stringProp name="query">DBCC DROPCLEANBUFFERS WITH NO_INFOMSGS;</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -659,7 +659,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
           </JSR223Sampler>
           <hashTree>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ6</stringProp>
               <stringProp name="query">DBCC FREEPROCCACHE WITH NO_INFOMSGS</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -671,7 +671,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             </JDBCPostProcessor>
             <hashTree/>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ6</stringProp>
               <stringProp name="query">DBCC DROPCLEANBUFFERS WITH NO_INFOMSGS;</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -746,7 +746,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
           </JSR223Sampler>
           <hashTree>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ7</stringProp>
               <stringProp name="query">DBCC FREEPROCCACHE WITH NO_INFOMSGS</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -758,7 +758,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             </JDBCPostProcessor>
             <hashTree/>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ7</stringProp>
               <stringProp name="query">DBCC DROPCLEANBUFFERS WITH NO_INFOMSGS;</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -833,7 +833,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
           </JSR223Sampler>
           <hashTree>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ8</stringProp>
               <stringProp name="query">DBCC FREEPROCCACHE WITH NO_INFOMSGS</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -845,7 +845,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             </JDBCPostProcessor>
             <hashTree/>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ8</stringProp>
               <stringProp name="query">DBCC DROPCLEANBUFFERS WITH NO_INFOMSGS;</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -920,7 +920,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
           </JSR223Sampler>
           <hashTree>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ9</stringProp>
               <stringProp name="query">DBCC FREEPROCCACHE WITH NO_INFOMSGS</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -932,7 +932,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             </JDBCPostProcessor>
             <hashTree/>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ9</stringProp>
               <stringProp name="query">DBCC DROPCLEANBUFFERS WITH NO_INFOMSGS;</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -1007,7 +1007,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
           </JSR223Sampler>
           <hashTree>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ10</stringProp>
               <stringProp name="query">DBCC FREEPROCCACHE WITH NO_INFOMSGS</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -1019,7 +1019,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             </JDBCPostProcessor>
             <hashTree/>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ10</stringProp>
               <stringProp name="query">DBCC DROPCLEANBUFFERS WITH NO_INFOMSGS;</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -1094,7 +1094,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
           </JSR223Sampler>
           <hashTree>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ11</stringProp>
               <stringProp name="query">DBCC FREEPROCCACHE WITH NO_INFOMSGS</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -1106,7 +1106,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             </JDBCPostProcessor>
             <hashTree/>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ11</stringProp>
               <stringProp name="query">DBCC DROPCLEANBUFFERS WITH NO_INFOMSGS;</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -1181,7 +1181,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
           </JSR223Sampler>
           <hashTree>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ12</stringProp>
               <stringProp name="query">DBCC FREEPROCCACHE WITH NO_INFOMSGS</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -1193,7 +1193,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             </JDBCPostProcessor>
             <hashTree/>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ12</stringProp>
               <stringProp name="query">DBCC DROPCLEANBUFFERS WITH NO_INFOMSGS;</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>

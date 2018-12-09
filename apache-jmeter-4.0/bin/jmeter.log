@@ -1,43 +1,43 @@
-2018-12-08 22:33:11,764 INFO o.a.j.u.JMeterUtils: Setting Locale to es_CL
-2018-12-08 22:33:11,792 INFO o.a.j.u.JMeterUtils: Could not find resources for 'es_CL', using 'es'
-2018-12-08 22:33:11,792 INFO o.a.j.JMeter: Loading user properties from: user.properties
-2018-12-08 22:33:11,793 INFO o.a.j.JMeter: Loading system properties from: system.properties
-2018-12-08 22:33:11,797 INFO o.a.j.JMeter: Copyright (c) 1998-2018 The Apache Software Foundation
-2018-12-08 22:33:11,797 INFO o.a.j.JMeter: Version 4.0 r1823414
-2018-12-08 22:33:11,797 INFO o.a.j.JMeter: java.version=11.0.1
-2018-12-08 22:33:11,797 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
-2018-12-08 22:33:11,797 INFO o.a.j.JMeter: os.name=Mac OS X
-2018-12-08 22:33:11,797 INFO o.a.j.JMeter: os.arch=x86_64
-2018-12-08 22:33:11,797 INFO o.a.j.JMeter: os.version=10.13.6
-2018-12-08 22:33:11,797 INFO o.a.j.JMeter: file.encoding=UTF-8
-2018-12-08 22:33:11,798 INFO o.a.j.JMeter: Max memory     =4294967296
-2018-12-08 22:33:11,798 INFO o.a.j.JMeter: Available Processors =8
-2018-12-08 22:33:11,804 INFO o.a.j.JMeter: Default Locale=español (Chile)
-2018-12-08 22:33:11,804 INFO o.a.j.JMeter: JMeter  Locale=español (Chile)
-2018-12-08 22:33:11,804 INFO o.a.j.JMeter: JMeterHome=/Users/alanolivares/Documents/Desarrollos/loadData/apache-jmeter-4.0
-2018-12-08 22:33:11,805 INFO o.a.j.JMeter: user.dir  =/Users/alanolivares/Documents/Desarrollos/loadData/apache-jmeter-4.0/bin
-2018-12-08 22:33:11,805 INFO o.a.j.JMeter: PWD       =/Users/alanolivares/Documents/Desarrollos/loadData/apache-jmeter-4.0/bin
-2018-12-08 22:33:11,820 INFO o.a.j.JMeter: IP: 192.168.0.16 Name: MacBook-Pro-de-Alan.local FullName: 192.168.0.16
-2018-12-08 22:33:14,290 INFO o.a.j.g.a.LookAndFeelCommand: Installing Darcula LAF
-2018-12-08 22:33:14,298 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: com.bulenkov.darcula.DarculaLaf [Darcula]
-2018-12-08 22:33:14,298 INFO o.a.j.JMeter: Setting LAF to: com.bulenkov.darcula.DarculaLaf
-2018-12-08 22:33:14,371 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
-2018-12-08 22:33:14,773 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
-2018-12-08 22:33:14,773 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
-2018-12-08 22:33:15,909 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2018-12-08 22:33:15,910 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2018-12-08 22:33:15,910 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2018-12-08 22:33:15,910 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2018-12-08 22:33:15,910 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
-2018-12-08 22:33:15,910 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
-2018-12-08 22:33:16,259 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
-2018-12-08 22:33:16,260 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file /Users/alanolivares/Documents/Desarrollos/loadData/apache-jmeter-4.0/bin/proxyserver.jks
-2018-12-08 22:33:16,367 INFO o.a.j.s.FileServer: Default base='/Users/alanolivares/Documents/Desarrollos/loadData/apache-jmeter-4.0/bin'
-2018-12-08 22:33:16,694 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
-2018-12-08 22:33:16,695 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
-2018-12-08 22:33:16,695 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
-2018-12-08 22:33:16,695 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
-2018-12-08 22:33:16,713 WARN o.a.j.v.ViewResultsFullVisualizer: Error loading result renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2018-12-08 22:40:33,092 INFO o.a.j.u.JMeterUtils: Setting Locale to es_CL
+2018-12-08 22:40:33,132 INFO o.a.j.u.JMeterUtils: Could not find resources for 'es_CL', using 'es'
+2018-12-08 22:40:33,133 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2018-12-08 22:40:33,133 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2018-12-08 22:40:33,140 INFO o.a.j.JMeter: Copyright (c) 1998-2018 The Apache Software Foundation
+2018-12-08 22:40:33,141 INFO o.a.j.JMeter: Version 4.0 r1823414
+2018-12-08 22:40:33,141 INFO o.a.j.JMeter: java.version=11.0.1
+2018-12-08 22:40:33,141 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2018-12-08 22:40:33,141 INFO o.a.j.JMeter: os.name=Mac OS X
+2018-12-08 22:40:33,141 INFO o.a.j.JMeter: os.arch=x86_64
+2018-12-08 22:40:33,141 INFO o.a.j.JMeter: os.version=10.13.6
+2018-12-08 22:40:33,141 INFO o.a.j.JMeter: file.encoding=UTF-8
+2018-12-08 22:40:33,141 INFO o.a.j.JMeter: Max memory     =4294967296
+2018-12-08 22:40:33,141 INFO o.a.j.JMeter: Available Processors =8
+2018-12-08 22:40:33,154 INFO o.a.j.JMeter: Default Locale=español (Chile)
+2018-12-08 22:40:33,155 INFO o.a.j.JMeter: JMeter  Locale=español (Chile)
+2018-12-08 22:40:33,155 INFO o.a.j.JMeter: JMeterHome=/Users/alanolivares/Documents/Desarrollos/loadData/apache-jmeter-4.0
+2018-12-08 22:40:33,155 INFO o.a.j.JMeter: user.dir  =/Users/alanolivares/Documents/Desarrollos/loadData/apache-jmeter-4.0/bin
+2018-12-08 22:40:33,156 INFO o.a.j.JMeter: PWD       =/Users/alanolivares/Documents/Desarrollos/loadData/apache-jmeter-4.0/bin
+2018-12-08 22:40:33,173 INFO o.a.j.JMeter: IP: 192.168.0.16 Name: MacBook-Pro-de-Alan.local FullName: 192.168.0.16
+2018-12-08 22:40:35,833 INFO o.a.j.g.a.LookAndFeelCommand: Installing Darcula LAF
+2018-12-08 22:40:35,841 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: com.bulenkov.darcula.DarculaLaf [Darcula]
+2018-12-08 22:40:35,841 INFO o.a.j.JMeter: Setting LAF to: com.bulenkov.darcula.DarculaLaf
+2018-12-08 22:40:35,925 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2018-12-08 22:40:36,370 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2018-12-08 22:40:36,370 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2018-12-08 22:40:37,602 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-12-08 22:40:37,603 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-12-08 22:40:37,603 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-12-08 22:40:37,603 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-12-08 22:40:37,603 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2018-12-08 22:40:37,603 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2018-12-08 22:40:37,977 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
+2018-12-08 22:40:37,978 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file /Users/alanolivares/Documents/Desarrollos/loadData/apache-jmeter-4.0/bin/proxyserver.jks
+2018-12-08 22:40:38,097 INFO o.a.j.s.FileServer: Default base='/Users/alanolivares/Documents/Desarrollos/loadData/apache-jmeter-4.0/bin'
+2018-12-08 22:40:38,365 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2018-12-08 22:40:38,365 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2018-12-08 22:40:38,365 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2018-12-08 22:40:38,365 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2018-12-08 22:40:38,384 WARN o.a.j.v.ViewResultsFullVisualizer: Error loading result renderer: org.apache.jmeter.visualizers.RenderInBrowser
 java.lang.NoClassDefFoundError: javafx/embed/swing/JFXPanel
 	at java.lang.Class.forName0(Native Method) ~[?:?]
 	at java.lang.Class.forName(Class.java:315) ~[?:?]
@@ -76,13 +76,13 @@ Caused by: java.lang.ClassNotFoundException: javafx.embed.swing.JFXPanel
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:588) ~[?:?]
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[?:?]
 	... 32 more
-2018-12-08 22:33:31,533 INFO o.a.j.g.a.Load: Loading file: /Users/alanolivares/Documents/Desarrollos/loadData/GCP/GCP-PR-10TBv2.jmx
-2018-12-08 22:33:31,533 INFO o.a.j.s.FileServer: Set new base='/Users/alanolivares/Documents/Desarrollos/loadData/GCP'
-2018-12-08 22:33:31,646 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
-2018-12-08 22:33:31,660 INFO o.a.j.s.SaveService: Using SaveService properties version 4.0
-2018-12-08 22:33:31,662 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
-2018-12-08 22:33:31,663 INFO o.a.j.s.SaveService: Loading file: /Users/alanolivares/Documents/Desarrollos/loadData/GCP/GCP-PR-10TBv2.jmx
-2018-12-08 22:33:31,732 WARN o.a.j.v.ViewResultsFullVisualizer: Error loading result renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2018-12-08 22:40:43,356 INFO o.a.j.g.a.Load: Loading file: /Users/alanolivares/Documents/Desarrollos/loadData/AzureDWH/Azure-PR-10TB.jmx
+2018-12-08 22:40:43,356 INFO o.a.j.s.FileServer: Set new base='/Users/alanolivares/Documents/Desarrollos/loadData/AzureDWH'
+2018-12-08 22:40:43,476 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2018-12-08 22:40:43,492 INFO o.a.j.s.SaveService: Using SaveService properties version 4.0
+2018-12-08 22:40:43,494 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2018-12-08 22:40:43,495 INFO o.a.j.s.SaveService: Loading file: /Users/alanolivares/Documents/Desarrollos/loadData/AzureDWH/Azure-PR-10TB.jmx
+2018-12-08 22:40:43,561 WARN o.a.j.v.ViewResultsFullVisualizer: Error loading result renderer: org.apache.jmeter.visualizers.RenderInBrowser
 java.lang.NoClassDefFoundError: javafx/embed/swing/JFXPanel
 	at java.lang.Class.forName0(Native Method) ~[?:?]
 	at java.lang.Class.forName(Class.java:315) ~[?:?]
@@ -105,7 +105,7 @@ java.lang.NoClassDefFoundError: javafx/embed/swing/JFXPanel
 	at org.apache.jmeter.gui.action.Load.insertLoadedTree(Load.java:193) [ApacheJMeter_core.jar:4.0 r1823414]
 	at org.apache.jmeter.gui.action.Load.loadProjectFile(Load.java:130) [ApacheJMeter_core.jar:4.0 r1823414]
 	at org.apache.jmeter.gui.action.Load.loadProjectFile(Load.java:101) [ApacheJMeter_core.jar:4.0 r1823414]
-	at org.apache.jmeter.gui.action.Load.doActionAfterCheck(Load.java:88) [ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.gui.action.LoadRecentProject.doActionAfterCheck(LoadRecentProject.java:67) [ApacheJMeter_core.jar:4.0 r1823414]
 	at org.apache.jmeter.gui.action.AbstractActionWithNoRunningTest.doAction(AbstractActionWithNoRunningTest.java:45) [ApacheJMeter_core.jar:4.0 r1823414]
 	at org.apache.jmeter.gui.action.ActionRouter.performAction(ActionRouter.java:88) [ApacheJMeter_core.jar:4.0 r1823414]
 	at org.apache.jmeter.gui.action.ActionRouter.lambda$actionPerformed$0(ActionRouter.java:70) [ApacheJMeter_core.jar:4.0 r1823414]
@@ -127,29 +127,112 @@ Caused by: java.lang.ClassNotFoundException: javafx.embed.swing.JFXPanel
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:588) ~[?:?]
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[?:?]
 	... 38 more
-2018-12-08 22:33:31,903 INFO o.a.j.s.FileServer: Set new base='/Users/alanolivares/Documents/Desarrollos/loadData/GCP'
-2018-12-08 22:33:36,464 INFO o.a.j.e.StandardJMeterEngine: Running the test!
-2018-12-08 22:33:36,465 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2018-12-08 22:33:36,465 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2018-12-08 22:33:36,482 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
-2018-12-08 22:33:36,529 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Q1
-2018-12-08 22:33:36,529 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Q1.
-2018-12-08 22:33:36,530 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
-2018-12-08 22:33:36,530 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=20 perThread=20000.0 delayedStart=false
-2018-12-08 22:33:36,533 INFO o.a.j.t.ThreadGroup: Started thread group number 1
-2018-12-08 22:33:36,533 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
-2018-12-08 22:33:36,537 INFO o.a.j.t.JMeterThread: Thread started: Q1 1-1
-2018-12-08 22:33:36,553 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = MacBook-Pro-de-Alan.local
-2018-12-08 22:33:36,557 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
-2018-12-08 22:33:36,629 INFO o.a.j.p.h.s.LazySchemeSocketFactory: Setting up HTTPS TrustAll Socket Factory
-2018-12-08 22:33:36,635 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
-2018-12-08 22:33:36,635 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
-2018-12-08 22:33:36,752 INFO o.a.j.u.SSLManager: JmeterKeyStore Location:  type JKS
-2018-12-08 22:33:36,753 INFO o.a.j.u.SSLManager: KeyStore created OK
-2018-12-08 22:33:36,753 WARN o.a.j.u.SSLManager: Keystore file not found, loading empty keystore
-2018-12-08 22:35:40,170 INFO o.a.j.g.a.Start: Stopping test
-2018-12-08 22:35:40,202 INFO o.a.j.t.JMeterThread: Stopping: Q1 1-1
-2018-12-08 22:35:40,202 WARN o.a.j.t.JMeterThread: Interrupting: Q1 1-1 sampler: HTTP Request JobID Q1
-2018-12-08 22:35:40,214 INFO o.a.j.t.JMeterThread: Thread finished: Q1 1-1
-2018-12-08 22:35:40,215 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
-2018-12-08 22:35:40,215 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2018-12-08 22:40:43,720 INFO o.a.j.s.FileServer: Set new base='/Users/alanolivares/Documents/Desarrollos/loadData/AzureDWH'
+2018-12-08 22:58:14,523 INFO o.a.j.g.a.Load: Loading file: /Users/alanolivares/Documents/Desarrollos/loadData/GCP/GCP-PR-10TBv2.jmx
+2018-12-08 22:58:14,523 INFO o.a.j.s.FileServer: Set new base='/Users/alanolivares/Documents/Desarrollos/loadData/GCP'
+2018-12-08 22:58:14,523 INFO o.a.j.s.SaveService: Loading file: /Users/alanolivares/Documents/Desarrollos/loadData/GCP/GCP-PR-10TBv2.jmx
+2018-12-08 22:58:14,556 WARN o.a.j.v.ViewResultsFullVisualizer: Error loading result renderer: org.apache.jmeter.visualizers.RenderInBrowser
+java.lang.NoClassDefFoundError: javafx/embed/swing/JFXPanel
+	at java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.lang.Class.forName(Class.java:315) ~[?:?]
+	at org.apache.jmeter.visualizers.ViewResultsFullVisualizer.createComboRender(ViewResultsFullVisualizer.java:462) [ApacheJMeter_components.jar:4.0 r1823414]
+	at org.apache.jmeter.visualizers.ViewResultsFullVisualizer.createLeftPanel(ViewResultsFullVisualizer.java:430) [ApacheJMeter_components.jar:4.0 r1823414]
+	at org.apache.jmeter.visualizers.ViewResultsFullVisualizer.init(ViewResultsFullVisualizer.java:342) [ApacheJMeter_components.jar:4.0 r1823414]
+	at org.apache.jmeter.visualizers.ViewResultsFullVisualizer.<init>(ViewResultsFullVisualizer.java:147) [ApacheJMeter_components.jar:4.0 r1823414]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:490) ~[?:?]
+	at java.lang.Class.newInstance(Class.java:584) [?:?]
+	at org.apache.jmeter.gui.GuiPackage.getGuiFromCache(GuiPackage.java:405) [ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.gui.GuiPackage.getGui(GuiPackage.java:251) [ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.gui.GuiPackage.getGui(GuiPackage.java:222) [ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.gui.tree.JMeterTreeModel.addComponent(JMeterTreeModel.java:157) [ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.gui.tree.JMeterTreeModel.addSubTree(JMeterTreeModel.java:133) [ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.gui.tree.JMeterTreeModel.addSubTree(JMeterTreeModel.java:125) [ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.gui.GuiPackage.addSubTree(GuiPackage.java:522) [ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.gui.action.Load.insertLoadedTree(Load.java:193) [ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.gui.action.Load.loadProjectFile(Load.java:130) [ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.gui.action.Load.loadProjectFile(Load.java:101) [ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.gui.action.LoadRecentProject.doActionAfterCheck(LoadRecentProject.java:67) [ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.gui.action.AbstractActionWithNoRunningTest.doAction(AbstractActionWithNoRunningTest.java:45) [ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.gui.action.ActionRouter.performAction(ActionRouter.java:88) [ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.gui.action.ActionRouter.lambda$actionPerformed$0(ActionRouter.java:70) [ApacheJMeter_core.jar:4.0 r1823414]
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313) [?:?]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:770) [?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:721) [?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:715) [?:?]
+	at java.security.AccessController.doPrivileged(Native Method) [?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85) [?:?]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:740) [?:?]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) [?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) [?:?]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) [?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) [?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) [?:?]
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) [?:?]
+Caused by: java.lang.ClassNotFoundException: javafx.embed.swing.JFXPanel
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:471) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:588) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[?:?]
+	... 38 more
+2018-12-08 22:58:14,680 INFO o.a.j.s.FileServer: Set new base='/Users/alanolivares/Documents/Desarrollos/loadData/GCP'
+2018-12-08 22:58:51,160 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2018-12-08 22:58:51,161 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-12-08 22:58:51,161 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-12-08 22:58:51,177 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2018-12-08 22:58:51,226 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Q1
+2018-12-08 22:58:51,227 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Q1.
+2018-12-08 22:58:51,227 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-12-08 22:58:51,227 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=20 perThread=20000.0 delayedStart=false
+2018-12-08 22:58:51,230 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2018-12-08 22:58:51,230 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2018-12-08 22:58:51,233 INFO o.a.j.t.JMeterThread: Thread started: Q1 1-1
+2018-12-08 22:58:51,247 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = MacBook-Pro-de-Alan.local
+2018-12-08 22:58:51,250 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2018-12-08 22:58:51,320 INFO o.a.j.p.h.s.LazySchemeSocketFactory: Setting up HTTPS TrustAll Socket Factory
+2018-12-08 22:58:51,323 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2018-12-08 22:58:51,324 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2018-12-08 22:58:51,405 INFO o.a.j.u.SSLManager: JmeterKeyStore Location:  type JKS
+2018-12-08 22:58:51,406 INFO o.a.j.u.SSLManager: KeyStore created OK
+2018-12-08 22:58:51,406 WARN o.a.j.u.SSLManager: Keystore file not found, loading empty keystore
+2018-12-08 22:59:04,203 INFO o.a.j.t.JMeterThread: Thread is done: Q1 1-1
+2018-12-08 22:59:04,204 INFO o.a.j.t.JMeterThread: Thread finished: Q1 1-1
+2018-12-08 22:59:04,204 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2018-12-08 22:59:04,205 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2018-12-08 22:59:47,188 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2018-12-08 22:59:47,189 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-12-08 22:59:47,230 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2018-12-08 22:59:47,283 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Q1
+2018-12-08 22:59:47,283 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Q1.
+2018-12-08 22:59:47,283 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-12-08 22:59:47,284 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=20 perThread=20000.0 delayedStart=false
+2018-12-08 22:59:47,284 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2018-12-08 22:59:47,284 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: Q1 to finish before starting next group
+2018-12-08 22:59:47,285 INFO o.a.j.t.JMeterThread: Thread started: Q1 1-1
+2018-12-08 22:59:58,064 INFO o.a.j.t.JMeterThread: Thread is done: Q1 1-1
+2018-12-08 22:59:58,064 INFO o.a.j.t.JMeterThread: Thread finished: Q1 1-1
+2018-12-08 22:59:58,064 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : Q2
+2018-12-08 22:59:58,065 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Q2.
+2018-12-08 22:59:58,065 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-12-08 22:59:58,065 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=1 ramp-up=20 perThread=20000.0 delayedStart=false
+2018-12-08 22:59:58,065 INFO o.a.j.t.ThreadGroup: Started thread group number 2
+2018-12-08 22:59:58,066 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: Q2 to finish before starting next group
+2018-12-08 22:59:58,066 INFO o.a.j.t.JMeterThread: Thread started: Q2 2-1
+2018-12-08 23:00:24,754 INFO o.a.j.g.a.Start: Stopping test
+2018-12-08 23:00:24,770 INFO o.a.j.t.JMeterThread: Stopping: Q2 2-1
+2018-12-08 23:00:24,770 WARN o.a.j.t.JMeterThread: Interrupting: Q2 2-1 sampler: Q2
+2018-12-08 23:00:24,784 INFO o.a.j.t.JMeterThread: Thread finished: Q2 2-1
+2018-12-08 23:00:24,784 INFO o.a.j.e.StandardJMeterEngine: Test stopped - no more thread groups will be started
+2018-12-08 23:00:24,784 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2018-12-08 23:00:24,784 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2018-12-08 23:00:49,893 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2018-12-08 23:00:49,893 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-12-08 23:00:49,897 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2018-12-08 23:00:49,965 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Q2
+2018-12-08 23:00:49,965 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Q2.
+2018-12-08 23:00:49,965 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-12-08 23:00:49,966 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=20 perThread=20000.0 delayedStart=false
+2018-12-08 23:00:49,966 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2018-12-08 23:00:49,966 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2018-12-08 23:00:49,966 INFO o.a.j.t.JMeterThread: Thread started: Q2 1-1

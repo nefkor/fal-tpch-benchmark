@@ -120,7 +120,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename"></stringProp>
+        <stringProp name="filename">/Users/alanolivares/Documents/Desarrollos/loadData/Power Run/results-dwh-pw-10tb.jtl</stringProp>
       </ResultCollector>
       <hashTree/>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
@@ -202,27 +202,27 @@ import java.sql.Connection;
 import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
 
             
-	Connection myConnection = DataSourceElement.getConnection(&quot;AzureSQLQ1&quot;);
-	
-	Statement sqlStatement = myConnection.createStatement();
-	//sqlStatement.setMaxRows(10000);
-	String readRecordSQL = &quot;select l_returnflag, l_linestatus, sum(l_quantity) as sum_qty, sum(l_extendedprice) as sum_base_price, sum(l_extendedprice * (1 - l_discount)) as sum_disc_price, sum(l_extendedprice * (1 - l_discount) * (1 + l_tax)) as sum_charge, avg(l_quantity) as avg_qty, avg(l_extendedprice) as avg_price, avg(l_discount) as avg_disc, count_big(*) as count_order from lineitem where l_shipdate &lt;= DATEADD(day, -90, &apos;19981201&apos;) group by l_returnflag, l_linestatus order by l_returnflag, l_linestatus;&quot;;  
-	ResultSet myResultSet = sqlStatement.executeQuery(readRecordSQL);
+  Connection myConnection = DataSourceElement.getConnection(&quot;AzureSQLQ1&quot;);
+  
+  Statement sqlStatement = myConnection.createStatement();
+  //sqlStatement.setMaxRows(10000);
+  String readRecordSQL = &quot;select l_returnflag, l_linestatus, sum(l_quantity) as sum_qty, sum(l_extendedprice) as sum_base_price, sum(l_extendedprice * (1 - l_discount)) as sum_disc_price, sum(l_extendedprice * (1 - l_discount) * (1 + l_tax)) as sum_charge, avg(l_quantity) as avg_qty, avg(l_extendedprice) as avg_price, avg(l_discount) as avg_disc, count_big(*) as count_order from lineitem where l_shipdate &lt;= DATEADD(day, -90, &apos;19981201&apos;) group by l_returnflag, l_linestatus order by l_returnflag, l_linestatus;&quot;;  
+  ResultSet myResultSet = sqlStatement.executeQuery(readRecordSQL);
 
-	myResultSet.next()
-	int resultSetSize = myResultSet.getRow();
-	
-	myResultSet.close();
-	myConnection.close();
-	
-	assert resultSetSize &gt; 0
-	log.info(&quot;Q1 OK&quot;);
+  myResultSet.next()
+  int resultSetSize = myResultSet.getRow();
+  
+  myResultSet.close();
+  myConnection.close();
+  
+  assert resultSetSize &gt; 0
+  log.info(&quot;Q1 OK&quot;);
           </stringProp>
             <stringProp name="scriptLanguage">groovy</stringProp>
           </JSR223Sampler>
           <hashTree>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ1</stringProp>
               <stringProp name="query">DBCC FREEPROCCACHE WITH NO_INFOMSGS;</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -234,7 +234,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             </JDBCPostProcessor>
             <hashTree/>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ1</stringProp>
               <stringProp name="query">DBCC DROPCLEANBUFFERS WITH NO_INFOMSGS;</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -290,26 +290,26 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
 import java.sql.Connection;
 import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             
-	Connection myConnection = DataSourceElement.getConnection(&quot;AzureSQLQ2&quot;);
-	
-	Statement sqlStatement = myConnection.createStatement();
+  Connection myConnection = DataSourceElement.getConnection(&quot;AzureSQLQ2&quot;);
+  
+  Statement sqlStatement = myConnection.createStatement();
 
-	String readRecordSQL = &quot;select s_acctbal, s_name, n_name, p_partkey, p_mfgr, s_address, s_phone, s_comment from part, supplier, partsupp, nation, region where p_partkey = ps_partkey and s_suppkey = ps_suppkey and p_size = 15 and p_type like &apos;%BRASS&apos; and s_nationkey = n_nationkey and n_regionkey = r_regionkey and r_name = &apos;EUROPE&apos; and ps_supplycost = ( select min(ps_supplycost) from partsupp, supplier, nation, region where p_partkey = ps_partkey and s_suppkey = ps_suppkey and s_nationkey = n_nationkey and n_regionkey = r_regionkey and r_name = &apos;EUROPE&apos; ) order by s_acctbal desc, n_name, s_name, p_partkey;&quot;;  
-	ResultSet myResultSet = sqlStatement.executeQuery(readRecordSQL);
-	myResultSet.next()
-	int resultSetSize = myResultSet.getRow();
-	
-	myResultSet.close();
-	myConnection.close();
-	
-	assert resultSetSize &gt; 0
-	log.info(&quot;Q2 OK&quot;);
+  String readRecordSQL = &quot;select s_acctbal, s_name, n_name, p_partkey, p_mfgr, s_address, s_phone, s_comment from part, supplier, partsupp, nation, region where p_partkey = ps_partkey and s_suppkey = ps_suppkey and p_size = 15 and p_type like &apos;%BRASS&apos; and s_nationkey = n_nationkey and n_regionkey = r_regionkey and r_name = &apos;EUROPE&apos; and ps_supplycost = ( select min(ps_supplycost) from partsupp, supplier, nation, region where p_partkey = ps_partkey and s_suppkey = ps_suppkey and s_nationkey = n_nationkey and n_regionkey = r_regionkey and r_name = &apos;EUROPE&apos; ) order by s_acctbal desc, n_name, s_name, p_partkey;&quot;;  
+  ResultSet myResultSet = sqlStatement.executeQuery(readRecordSQL);
+  myResultSet.next()
+  int resultSetSize = myResultSet.getRow();
+  
+  myResultSet.close();
+  myConnection.close();
+  
+  assert resultSetSize &gt; 0
+  log.info(&quot;Q2 OK&quot;);
           </stringProp>
             <stringProp name="scriptLanguage">groovy</stringProp>
           </JSR223Sampler>
           <hashTree>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ2</stringProp>
               <stringProp name="query">DBCC FREEPROCCACHE WITH NO_INFOMSGS</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -321,7 +321,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             </JDBCPostProcessor>
             <hashTree/>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ2</stringProp>
               <stringProp name="query">DBCC DROPCLEANBUFFERS WITH NO_INFOMSGS;</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -377,26 +377,26 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
 import java.sql.Connection;
 import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             
-	Connection myConnection = DataSourceElement.getConnection(&quot;AzureSQLQ3&quot;);
-	
-	Statement sqlStatement = myConnection.createStatement();
-	//sqlStatement.setMaxRows(10000);
-	String readRecordSQL = &quot;select l_orderkey, sum(l_extendedprice * (1 - l_discount)) as revenue, o_orderdate, o_shippriority from customer, orders, lineitem where c_mktsegment = &apos;BUILDING&apos; and c_custkey = o_custkey and l_orderkey = o_orderkey and o_orderdate &lt; &apos;1995-03-15&apos; and l_shipdate &gt; &apos;1995-03-15&apos; group by l_orderkey, o_orderdate, o_shippriority order by revenue desc, o_orderdate;&quot;;  
-	ResultSet myResultSet = sqlStatement.executeQuery(readRecordSQL);
-	myResultSet.next()
-	int resultSetSize = myResultSet.getRow();
-	
-	myResultSet.close();
-	myConnection.close();
-	
-	assert resultSetSize &gt; 0
-	log.info(&quot;Q3 OK&quot;);
+  Connection myConnection = DataSourceElement.getConnection(&quot;AzureSQLQ3&quot;);
+  
+  Statement sqlStatement = myConnection.createStatement();
+  //sqlStatement.setMaxRows(10000);
+  String readRecordSQL = &quot;select l_orderkey, sum(l_extendedprice * (1 - l_discount)) as revenue, o_orderdate, o_shippriority from customer, orders, lineitem where c_mktsegment = &apos;BUILDING&apos; and c_custkey = o_custkey and l_orderkey = o_orderkey and o_orderdate &lt; &apos;1995-03-15&apos; and l_shipdate &gt; &apos;1995-03-15&apos; group by l_orderkey, o_orderdate, o_shippriority order by revenue desc, o_orderdate;&quot;;  
+  ResultSet myResultSet = sqlStatement.executeQuery(readRecordSQL);
+  myResultSet.next()
+  int resultSetSize = myResultSet.getRow();
+  
+  myResultSet.close();
+  myConnection.close();
+  
+  assert resultSetSize &gt; 0
+  log.info(&quot;Q3 OK&quot;);
           </stringProp>
             <stringProp name="scriptLanguage">groovy</stringProp>
           </JSR223Sampler>
           <hashTree>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ3</stringProp>
               <stringProp name="query">DBCC FREEPROCCACHE WITH NO_INFOMSGS</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -408,7 +408,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             </JDBCPostProcessor>
             <hashTree/>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ3</stringProp>
               <stringProp name="query">DBCC DROPCLEANBUFFERS WITH NO_INFOMSGS;</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -464,26 +464,26 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
 import java.sql.Connection;
 import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             
-	Connection myConnection = DataSourceElement.getConnection(&quot;AzureSQLQ4&quot;);
-	
-	Statement sqlStatement = myConnection.createStatement();
-	//sqlStatement.setMaxRows(10000);
-	String readRecordSQL = &quot;select o_orderpriority, count_big(*) as order_count from orders where o_orderdate &gt;= &apos;1993-07-01&apos; and o_orderdate &lt; DATEADD(month, 3, &apos;19930701&apos;) and exists ( select * from lineitem where l_orderkey = o_orderkey and l_commitdate &lt; l_receiptdate ) group by o_orderpriority order by o_orderpriority;&quot;;  
-	ResultSet myResultSet = sqlStatement.executeQuery(readRecordSQL);
-	myResultSet.next()
-	int resultSetSize = myResultSet.getRow();
-	
-	myResultSet.close();
-	myConnection.close();
-	
-	assert resultSetSize &gt; 0
-	log.info(&quot;Q4 OK&quot;);
+  Connection myConnection = DataSourceElement.getConnection(&quot;AzureSQLQ4&quot;);
+  
+  Statement sqlStatement = myConnection.createStatement();
+  //sqlStatement.setMaxRows(10000);
+  String readRecordSQL = &quot;select o_orderpriority, count_big(*) as order_count from orders where o_orderdate &gt;= &apos;1993-07-01&apos; and o_orderdate &lt; DATEADD(month, 3, &apos;19930701&apos;) and exists ( select * from lineitem where l_orderkey = o_orderkey and l_commitdate &lt; l_receiptdate ) group by o_orderpriority order by o_orderpriority;&quot;;  
+  ResultSet myResultSet = sqlStatement.executeQuery(readRecordSQL);
+  myResultSet.next()
+  int resultSetSize = myResultSet.getRow();
+  
+  myResultSet.close();
+  myConnection.close();
+  
+  assert resultSetSize &gt; 0
+  log.info(&quot;Q4 OK&quot;);
           </stringProp>
             <stringProp name="scriptLanguage">groovy</stringProp>
           </JSR223Sampler>
           <hashTree>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ4</stringProp>
               <stringProp name="query">DBCC FREEPROCCACHE WITH NO_INFOMSGS</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -495,7 +495,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             </JDBCPostProcessor>
             <hashTree/>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ4</stringProp>
               <stringProp name="query">DBCC DROPCLEANBUFFERS WITH NO_INFOMSGS;</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -551,26 +551,26 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
 import java.sql.Connection;
 import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             
-	Connection myConnection = DataSourceElement.getConnection(&quot;AzureSQLQ5&quot;);
-	
-	Statement sqlStatement = myConnection.createStatement();
-	//sqlStatement.setMaxRows(10000);
-	String readRecordSQL = &quot;select n_name, sum(l_extendedprice * (1 - l_discount)) as revenue from customer, orders, lineitem, supplier, nation, region where c_custkey = o_custkey and l_orderkey = o_orderkey and l_suppkey = s_suppkey and c_nationkey = s_nationkey and s_nationkey = n_nationkey and n_regionkey = r_regionkey and r_name = &apos;ASIA&apos; and o_orderdate &gt;= &apos;1994-01-01&apos; and o_orderdate &lt; DATEADD(year, 1, &apos;19940101&apos;) group by n_name order by revenue desc;&quot;;  
-	ResultSet myResultSet = sqlStatement.executeQuery(readRecordSQL);
-	myResultSet.next()
-	int resultSetSize = myResultSet.getRow();
-	
-	myResultSet.close();
-	myConnection.close();
-	
-	assert resultSetSize &gt; 0 
-	log.info(&quot;Q5 OK&quot;);
+  Connection myConnection = DataSourceElement.getConnection(&quot;AzureSQLQ5&quot;);
+  
+  Statement sqlStatement = myConnection.createStatement();
+  //sqlStatement.setMaxRows(10000);
+  String readRecordSQL = &quot;select n_name, sum(l_extendedprice * (1 - l_discount)) as revenue from customer, orders, lineitem, supplier, nation, region where c_custkey = o_custkey and l_orderkey = o_orderkey and l_suppkey = s_suppkey and c_nationkey = s_nationkey and s_nationkey = n_nationkey and n_regionkey = r_regionkey and r_name = &apos;ASIA&apos; and o_orderdate &gt;= &apos;1994-01-01&apos; and o_orderdate &lt; DATEADD(year, 1, &apos;19940101&apos;) group by n_name order by revenue desc;&quot;;  
+  ResultSet myResultSet = sqlStatement.executeQuery(readRecordSQL);
+  myResultSet.next()
+  int resultSetSize = myResultSet.getRow();
+  
+  myResultSet.close();
+  myConnection.close();
+  
+  assert resultSetSize &gt; 0 
+  log.info(&quot;Q5 OK&quot;);
           </stringProp>
             <stringProp name="scriptLanguage">groovy</stringProp>
           </JSR223Sampler>
           <hashTree>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ5</stringProp>
               <stringProp name="query">DBCC FREEPROCCACHE WITH NO_INFOMSGS</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -582,7 +582,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             </JDBCPostProcessor>
             <hashTree/>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ5</stringProp>
               <stringProp name="query">DBCC DROPCLEANBUFFERS WITH NO_INFOMSGS;</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -638,28 +638,28 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
 import java.sql.Connection;
 import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
 
-	int random = Math.abs(new Random().nextInt() % 200) + 1;
+  int random = Math.abs(new Random().nextInt() % 200) + 1;
             
-	Connection myConnection = DataSourceElement.getConnection(&quot;AzureSQLQ6&quot;);
-	
-	Statement sqlStatement = myConnection.createStatement();
-	//sqlStatement.setMaxRows(10000);
-	String readRecordSQL = &quot;select sum(l_extendedprice * l_discount) as revenue from lineitem where l_shipdate &gt;= &apos;1994-01-01&apos; and l_shipdate &lt; DATEADD(year, 1, &apos;19940101&apos;) and l_discount between .06 - 0.01 and .06 + 0.01 and l_quantity &lt; &quot; + random;  
-	ResultSet myResultSet = sqlStatement.executeQuery(readRecordSQL);
-	myResultSet.next()
-	int resultSetSize = myResultSet.getRow();
-	
-	myResultSet.close();
-	myConnection.close();
-	
-	assert resultSetSize &gt; 0
-	log.info(&quot;Q6 OK&quot;);
+  Connection myConnection = DataSourceElement.getConnection(&quot;AzureSQLQ6&quot;);
+  
+  Statement sqlStatement = myConnection.createStatement();
+  //sqlStatement.setMaxRows(10000);
+  String readRecordSQL = &quot;select sum(l_extendedprice * l_discount) as revenue from lineitem where l_shipdate &gt;= &apos;1994-01-01&apos; and l_shipdate &lt; DATEADD(year, 1, &apos;19940101&apos;) and l_discount between .06 - 0.01 and .06 + 0.01 and l_quantity &lt; &quot; + random;  
+  ResultSet myResultSet = sqlStatement.executeQuery(readRecordSQL);
+  myResultSet.next()
+  int resultSetSize = myResultSet.getRow();
+  
+  myResultSet.close();
+  myConnection.close();
+  
+  assert resultSetSize &gt; 0
+  log.info(&quot;Q6 OK&quot;);
           </stringProp>
             <stringProp name="scriptLanguage">groovy</stringProp>
           </JSR223Sampler>
           <hashTree>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ6</stringProp>
               <stringProp name="query">DBCC FREEPROCCACHE WITH NO_INFOMSGS</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -671,7 +671,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             </JDBCPostProcessor>
             <hashTree/>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ6</stringProp>
               <stringProp name="query">DBCC DROPCLEANBUFFERS WITH NO_INFOMSGS;</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -727,26 +727,26 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
 import java.sql.Connection;
 import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             
-	Connection myConnection = DataSourceElement.getConnection(&quot;AzureSQLQ7&quot;);
-	
-	Statement sqlStatement = myConnection.createStatement();
-	//sqlStatement.setMaxRows(10000);
-	String readRecordSQL = &quot;select supp_nation, cust_nation, l_year, sum(volume) as revenue from ( select n1.n_name as supp_nation, n2.n_name as cust_nation, year(l_shipdate) as l_year, l_extendedprice * (1 - l_discount) as volume from supplier, lineitem, orders, customer, nation n1, nation n2 where s_suppkey = l_suppkey and o_orderkey = l_orderkey and c_custkey = o_custkey and s_nationkey = n1.n_nationkey and c_nationkey = n2.n_nationkey and ( (n1.n_name = &apos;FRANCE&apos; and n2.n_name = &apos;GERMANY&apos;) or (n1.n_name = &apos;GERMANY&apos; and n2.n_name = &apos;FRANCE&apos;) ) and l_shipdate between &apos;19950101&apos; and &apos;19961231&apos; ) as shipping group by supp_nation, cust_nation, l_year order by supp_nation, cust_nation, l_year;&quot;;  
-	ResultSet myResultSet = sqlStatement.executeQuery(readRecordSQL);
-	myResultSet.next()
-	int resultSetSize = myResultSet.getRow();
-	
-	myResultSet.close();
-	myConnection.close();
-	
-	assert resultSetSize &gt; 0
-	log.info(&quot;Q7 OK&quot;);
+  Connection myConnection = DataSourceElement.getConnection(&quot;AzureSQLQ7&quot;);
+  
+  Statement sqlStatement = myConnection.createStatement();
+  //sqlStatement.setMaxRows(10000);
+  String readRecordSQL = &quot;select supp_nation, cust_nation, l_year, sum(volume) as revenue from ( select n1.n_name as supp_nation, n2.n_name as cust_nation, year(l_shipdate) as l_year, l_extendedprice * (1 - l_discount) as volume from supplier, lineitem, orders, customer, nation n1, nation n2 where s_suppkey = l_suppkey and o_orderkey = l_orderkey and c_custkey = o_custkey and s_nationkey = n1.n_nationkey and c_nationkey = n2.n_nationkey and ( (n1.n_name = &apos;FRANCE&apos; and n2.n_name = &apos;GERMANY&apos;) or (n1.n_name = &apos;GERMANY&apos; and n2.n_name = &apos;FRANCE&apos;) ) and l_shipdate between &apos;19950101&apos; and &apos;19961231&apos; ) as shipping group by supp_nation, cust_nation, l_year order by supp_nation, cust_nation, l_year;&quot;;  
+  ResultSet myResultSet = sqlStatement.executeQuery(readRecordSQL);
+  myResultSet.next()
+  int resultSetSize = myResultSet.getRow();
+  
+  myResultSet.close();
+  myConnection.close();
+  
+  assert resultSetSize &gt; 0
+  log.info(&quot;Q7 OK&quot;);
           </stringProp>
             <stringProp name="scriptLanguage">groovy</stringProp>
           </JSR223Sampler>
           <hashTree>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ7</stringProp>
               <stringProp name="query">DBCC FREEPROCCACHE WITH NO_INFOMSGS</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -758,7 +758,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             </JDBCPostProcessor>
             <hashTree/>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ7</stringProp>
               <stringProp name="query">DBCC DROPCLEANBUFFERS WITH NO_INFOMSGS;</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -814,26 +814,26 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
 import java.sql.Connection;
 import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             
-	Connection myConnection = DataSourceElement.getConnection(&quot;AzureSQLQ8&quot;);
-	
-	Statement sqlStatement = myConnection.createStatement();
-	//sqlStatement.setMaxRows(10000);
-	String readRecordSQL = &quot;select o_year, sum(case when nation = &apos;BRAZIL&apos; then volume else 0 end) / sum(volume) as mkt_share from ( select year(o_orderdate) as o_year, l_extendedprice * (1 - l_discount) as volume, n2.n_name as nation from part, supplier, lineitem, orders, customer, nation n1, nation n2, region where p_partkey = l_partkey and s_suppkey = l_suppkey and l_orderkey = o_orderkey and o_custkey = c_custkey and c_nationkey = n1.n_nationkey and n1.n_regionkey = r_regionkey and r_name = &apos;AMERICA&apos; and s_nationkey = n2.n_nationkey and o_orderdate between &apos;19950101&apos; and &apos;19961231&apos; and p_type = &apos;ECONOMY ANODIZED STEEL&apos; ) as all_nations group by o_year order by o_year;&quot;;  
-	ResultSet myResultSet = sqlStatement.executeQuery(readRecordSQL);
-	myResultSet.next()
-	int resultSetSize = myResultSet.getRow();
-	
-	myResultSet.close();
-	myConnection.close();
-	
-	assert resultSetSize &gt; 0
-	log.info(&quot;Q8 OK&quot;);
+  Connection myConnection = DataSourceElement.getConnection(&quot;AzureSQLQ8&quot;);
+  
+  Statement sqlStatement = myConnection.createStatement();
+  //sqlStatement.setMaxRows(10000);
+  String readRecordSQL = &quot;select o_year, sum(case when nation = &apos;BRAZIL&apos; then volume else 0 end) / sum(volume) as mkt_share from ( select year(o_orderdate) as o_year, l_extendedprice * (1 - l_discount) as volume, n2.n_name as nation from part, supplier, lineitem, orders, customer, nation n1, nation n2, region where p_partkey = l_partkey and s_suppkey = l_suppkey and l_orderkey = o_orderkey and o_custkey = c_custkey and c_nationkey = n1.n_nationkey and n1.n_regionkey = r_regionkey and r_name = &apos;AMERICA&apos; and s_nationkey = n2.n_nationkey and o_orderdate between &apos;19950101&apos; and &apos;19961231&apos; and p_type = &apos;ECONOMY ANODIZED STEEL&apos; ) as all_nations group by o_year order by o_year;&quot;;  
+  ResultSet myResultSet = sqlStatement.executeQuery(readRecordSQL);
+  myResultSet.next()
+  int resultSetSize = myResultSet.getRow();
+  
+  myResultSet.close();
+  myConnection.close();
+  
+  assert resultSetSize &gt; 0
+  log.info(&quot;Q8 OK&quot;);
           </stringProp>
             <stringProp name="scriptLanguage">groovy</stringProp>
           </JSR223Sampler>
           <hashTree>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ8</stringProp>
               <stringProp name="query">DBCC FREEPROCCACHE WITH NO_INFOMSGS</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -845,7 +845,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             </JDBCPostProcessor>
             <hashTree/>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ8</stringProp>
               <stringProp name="query">DBCC DROPCLEANBUFFERS WITH NO_INFOMSGS;</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -901,26 +901,26 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
 import java.sql.Connection;
 import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             
-	Connection myConnection = DataSourceElement.getConnection(&quot;AzureSQLQ9&quot;);
-	
-	Statement sqlStatement = myConnection.createStatement();
-	//sqlStatement.setMaxRows(10000);
-	String readRecordSQL = &quot;select nation, o_year, sum(amount) as sum_profit from ( select n_name as nation, year(o_orderdate) as o_year, l_extendedprice * (1 - l_discount) - ps_supplycost * l_quantity as amount from part, supplier, lineitem, partsupp, orders, nation where s_suppkey = l_suppkey and ps_suppkey = l_suppkey and ps_partkey = l_partkey and p_partkey = l_partkey and o_orderkey = l_orderkey and s_nationkey = n_nationkey and p_name like &apos;%green%&apos; ) as profit group by nation, o_year order by nation, o_year desc;&quot;;  
-	ResultSet myResultSet = sqlStatement.executeQuery(readRecordSQL);
-	myResultSet.next()
-	int resultSetSize = myResultSet.getRow();
-	
-	myResultSet.close();
-	myConnection.close();
-	
-	assert resultSetSize &gt; 0
-	log.info(&quot;Q9 OK&quot;);
+  Connection myConnection = DataSourceElement.getConnection(&quot;AzureSQLQ9&quot;);
+  
+  Statement sqlStatement = myConnection.createStatement();
+  //sqlStatement.setMaxRows(10000);
+  String readRecordSQL = &quot;select nation, o_year, sum(amount) as sum_profit from ( select n_name as nation, year(o_orderdate) as o_year, l_extendedprice * (1 - l_discount) - ps_supplycost * l_quantity as amount from part, supplier, lineitem, partsupp, orders, nation where s_suppkey = l_suppkey and ps_suppkey = l_suppkey and ps_partkey = l_partkey and p_partkey = l_partkey and o_orderkey = l_orderkey and s_nationkey = n_nationkey and p_name like &apos;%green%&apos; ) as profit group by nation, o_year order by nation, o_year desc;&quot;;  
+  ResultSet myResultSet = sqlStatement.executeQuery(readRecordSQL);
+  myResultSet.next()
+  int resultSetSize = myResultSet.getRow();
+  
+  myResultSet.close();
+  myConnection.close();
+  
+  assert resultSetSize &gt; 0
+  log.info(&quot;Q9 OK&quot;);
           </stringProp>
             <stringProp name="scriptLanguage">groovy</stringProp>
           </JSR223Sampler>
           <hashTree>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ9</stringProp>
               <stringProp name="query">DBCC FREEPROCCACHE WITH NO_INFOMSGS</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -932,7 +932,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             </JDBCPostProcessor>
             <hashTree/>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ9</stringProp>
               <stringProp name="query">DBCC DROPCLEANBUFFERS WITH NO_INFOMSGS;</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -988,26 +988,26 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
 import java.sql.Connection;
 import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             
-	Connection myConnection = DataSourceElement.getConnection(&quot;AzureSQLQ10&quot;);
-	
-	Statement sqlStatement = myConnection.createStatement();
-	//sqlStatement.setMaxRows(10000);
-	String readRecordSQL = &quot;select c_custkey, c_name, sum(l_extendedprice * (1 - l_discount)) as revenue, c_acctbal, n_name, c_address, c_phone, c_comment from customer, orders, lineitem, nation where c_custkey = o_custkey and l_orderkey = o_orderkey and o_orderdate &gt;= &apos;1993-10-01&apos; and o_orderdate &lt; DATEADD(month, 3, &apos;19931001&apos;) and l_returnflag = &apos;R&apos; and c_nationkey = n_nationkey group by c_custkey, c_name, c_acctbal, c_phone, n_name, c_address, c_comment order by revenue desc;&quot;;  
-	ResultSet myResultSet = sqlStatement.executeQuery(readRecordSQL);
-	myResultSet.next()
-	int resultSetSize = myResultSet.getRow();
-	
-	myResultSet.close();
-	myConnection.close();
-	
-	assert resultSetSize &gt; 0
-	log.info(&quot;Q10 OK&quot;);
+  Connection myConnection = DataSourceElement.getConnection(&quot;AzureSQLQ10&quot;);
+  
+  Statement sqlStatement = myConnection.createStatement();
+  //sqlStatement.setMaxRows(10000);
+  String readRecordSQL = &quot;select c_custkey, c_name, sum(l_extendedprice * (1 - l_discount)) as revenue, c_acctbal, n_name, c_address, c_phone, c_comment from customer, orders, lineitem, nation where c_custkey = o_custkey and l_orderkey = o_orderkey and o_orderdate &gt;= &apos;1993-10-01&apos; and o_orderdate &lt; DATEADD(month, 3, &apos;19931001&apos;) and l_returnflag = &apos;R&apos; and c_nationkey = n_nationkey group by c_custkey, c_name, c_acctbal, c_phone, n_name, c_address, c_comment order by revenue desc;&quot;;  
+  ResultSet myResultSet = sqlStatement.executeQuery(readRecordSQL);
+  myResultSet.next()
+  int resultSetSize = myResultSet.getRow();
+  
+  myResultSet.close();
+  myConnection.close();
+  
+  assert resultSetSize &gt; 0
+  log.info(&quot;Q10 OK&quot;);
           </stringProp>
             <stringProp name="scriptLanguage">groovy</stringProp>
           </JSR223Sampler>
           <hashTree>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ10</stringProp>
               <stringProp name="query">DBCC FREEPROCCACHE WITH NO_INFOMSGS</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -1019,7 +1019,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             </JDBCPostProcessor>
             <hashTree/>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ10</stringProp>
               <stringProp name="query">DBCC DROPCLEANBUFFERS WITH NO_INFOMSGS;</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -1075,26 +1075,26 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
 import java.sql.Connection;
 import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             
-	Connection myConnection = DataSourceElement.getConnection(&quot;AzureSQLQ11&quot;);
-	
-	Statement sqlStatement = myConnection.createStatement();
-	//sqlStatement.setMaxRows(10000);
-	String readRecordSQL = &quot;select ps_partkey, sum(ps_supplycost * ps_availqty) as value from partsupp, supplier, nation where ps_suppkey = s_suppkey and s_nationkey = n_nationkey and n_name = &apos;GERMANY&apos; group by ps_partkey having sum(ps_supplycost * ps_availqty) &gt; ( select sum(ps_supplycost * ps_availqty) * 0.0001000000 from partsupp, supplier, nation where ps_suppkey = s_suppkey and s_nationkey = n_nationkey and n_name = &apos;GERMANY&apos; ) order by value desc;&quot;;  
-	ResultSet myResultSet = sqlStatement.executeQuery(readRecordSQL);
-	//myResultSet.next()
-	//int resultSetSize = myResultSet.getRow();
-	
-	myResultSet.close();
-	myConnection.close();
-	
-	//assert resultSetSize &gt; 0
-	log.info(&quot;Q11 OK&quot;);
+  Connection myConnection = DataSourceElement.getConnection(&quot;AzureSQLQ11&quot;);
+  
+  Statement sqlStatement = myConnection.createStatement();
+  //sqlStatement.setMaxRows(10000);
+  String readRecordSQL = &quot;select ps_partkey, sum(ps_supplycost * ps_availqty) as value from partsupp, supplier, nation where ps_suppkey = s_suppkey and s_nationkey = n_nationkey and n_name = &apos;GERMANY&apos; group by ps_partkey having sum(ps_supplycost * ps_availqty) &gt; ( select sum(ps_supplycost * ps_availqty) * 0.0001000000 from partsupp, supplier, nation where ps_suppkey = s_suppkey and s_nationkey = n_nationkey and n_name = &apos;GERMANY&apos; ) order by value desc;&quot;;  
+  ResultSet myResultSet = sqlStatement.executeQuery(readRecordSQL);
+  //myResultSet.next()
+  //int resultSetSize = myResultSet.getRow();
+  
+  myResultSet.close();
+  myConnection.close();
+  
+  //assert resultSetSize &gt; 0
+  log.info(&quot;Q11 OK&quot;);
           </stringProp>
             <stringProp name="scriptLanguage">groovy</stringProp>
           </JSR223Sampler>
           <hashTree>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ11</stringProp>
               <stringProp name="query">DBCC FREEPROCCACHE WITH NO_INFOMSGS</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -1106,7 +1106,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             </JDBCPostProcessor>
             <hashTree/>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ11</stringProp>
               <stringProp name="query">DBCC DROPCLEANBUFFERS WITH NO_INFOMSGS;</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -1162,26 +1162,26 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
 import java.sql.Connection;
 import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             
-	Connection myConnection = DataSourceElement.getConnection(&quot;AzureSQLQ12&quot;);
-	
-	Statement sqlStatement = myConnection.createStatement();
-	//sqlStatement.setMaxRows(10000);
-	String readRecordSQL = &quot;select l_shipmode, sum(case when o_orderpriority = &apos;1-URGENT&apos; or o_orderpriority = &apos;2-HIGH&apos; then 1 else 0 end) as high_line_count, sum(case when o_orderpriority &lt;&gt; &apos;1-URGENT&apos; and o_orderpriority &lt;&gt; &apos;2-HIGH&apos; then 1 else 0 end) as low_line_count from orders, lineitem where o_orderkey = l_orderkey and l_shipmode in (&apos;MAIL&apos;, &apos;SHIP&apos;) and l_commitdate &lt; l_receiptdate and l_shipdate &lt; l_commitdate and l_receiptdate &gt;= &apos;1994-01-01&apos; and l_receiptdate &lt; DATEADD(year, 1, &apos;19940101&apos;) group by l_shipmode order by l_shipmode;&quot;;  
-	ResultSet myResultSet = sqlStatement.executeQuery(readRecordSQL);
-	myResultSet.next()
-	int resultSetSize = myResultSet.getRow();
-	
-	myResultSet.close();
-	myConnection.close();
-	
-	assert resultSetSize &gt; 0
-	log.info(&quot;Q12 OK&quot;);
+  Connection myConnection = DataSourceElement.getConnection(&quot;AzureSQLQ12&quot;);
+  
+  Statement sqlStatement = myConnection.createStatement();
+  //sqlStatement.setMaxRows(10000);
+  String readRecordSQL = &quot;select l_shipmode, sum(case when o_orderpriority = &apos;1-URGENT&apos; or o_orderpriority = &apos;2-HIGH&apos; then 1 else 0 end) as high_line_count, sum(case when o_orderpriority &lt;&gt; &apos;1-URGENT&apos; and o_orderpriority &lt;&gt; &apos;2-HIGH&apos; then 1 else 0 end) as low_line_count from orders, lineitem where o_orderkey = l_orderkey and l_shipmode in (&apos;MAIL&apos;, &apos;SHIP&apos;) and l_commitdate &lt; l_receiptdate and l_shipdate &lt; l_commitdate and l_receiptdate &gt;= &apos;1994-01-01&apos; and l_receiptdate &lt; DATEADD(year, 1, &apos;19940101&apos;) group by l_shipmode order by l_shipmode;&quot;;  
+  ResultSet myResultSet = sqlStatement.executeQuery(readRecordSQL);
+  myResultSet.next()
+  int resultSetSize = myResultSet.getRow();
+  
+  myResultSet.close();
+  myConnection.close();
+  
+  assert resultSetSize &gt; 0
+  log.info(&quot;Q12 OK&quot;);
           </stringProp>
             <stringProp name="scriptLanguage">groovy</stringProp>
           </JSR223Sampler>
           <hashTree>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ12</stringProp>
               <stringProp name="query">DBCC FREEPROCCACHE WITH NO_INFOMSGS</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
@@ -1193,7 +1193,7 @@ import org.apache.jmeter.protocol.jdbc.config.DataSourceElement;
             </JDBCPostProcessor>
             <hashTree/>
             <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="JDBC PostProcessor" enabled="true">
-              <stringProp name="dataSource">AzureSQL</stringProp>
+              <stringProp name="dataSource">AzureSQLQ12</stringProp>
               <stringProp name="query">DBCC DROPCLEANBUFFERS WITH NO_INFOMSGS;</stringProp>
               <stringProp name="queryArguments"></stringProp>
               <stringProp name="queryArgumentsTypes"></stringProp>
