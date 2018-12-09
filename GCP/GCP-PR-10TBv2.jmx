@@ -92,7 +92,7 @@
           </elementProp>
           <elementProp name="TOKEN" elementType="Argument">
             <stringProp name="Argument.name">TOKEN</stringProp>
-            <stringProp name="Argument.value">Bearer ya29.GlxsBtm3-kd5GLZk2iOVW_8_ugc2PNc_fWNt35exyhchrGYEhvCepXKh26HnYRMVfKk98cS4bhNhPcxBcjLsMMstWool-gcgk8ZBPlK2IhY5QPVkVdzqcby2zdS0vg</stringProp>
+            <stringProp name="Argument.value">Bearer ya29.GlxtBjzvIk5mcFKKdutBPtBqWGZevV0XwQsclLZr37zlc9S_txoJ7i6E4vMzmSdc9pT2aLU4BuupMErNfRv_CCyxxcIvbB0TJVcBJf7oYMmKtlfAwgB2jhU5mgUoSA</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="TIMEOUT_QUERY" elementType="Argument">
@@ -102,7 +102,7 @@
           </elementProp>
           <elementProp name="ITERATIONS" elementType="Argument">
             <stringProp name="Argument.name">ITERATIONS</stringProp>
-            <stringProp name="Argument.value">5</stringProp>
+            <stringProp name="Argument.value">3</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
             <stringProp name="Argument.desc">LOOP</stringProp>
           </elementProp>
