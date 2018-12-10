@@ -1,3 +1,0 @@
-Label,# Samples,Average,Median,90% Line,95% Line,99% Line,Min,Max,Error %,Throughput,Received KB/sec,Sent KB/sec
-TC Q6,142,2114,1918,2832,3158,4500,1307,5932,"0,000%",",47096","0,43","0,34"
-Total,142,2114,1918,2832,3158,4500,1307,5932,"0,000%",",47096","0,43","0,34"

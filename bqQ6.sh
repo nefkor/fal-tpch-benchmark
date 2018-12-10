@@ -1,2 +1,0 @@
-#!/bin/bash
-bq --location=US query --use_legacy_sql=false --nouse_cache "select sum(l_extendedprice * l_discount) as revenue from aol_tpch10000.lineitem where l_shipdate >= date '1994-01-01' and l_shipdate < DATE_ADD(DATE \"1994-01-01\", INTERVAL 1 year) and l_discount between .06 - 0.01 and .06 + 0.01 and l_quantity < 24;"
