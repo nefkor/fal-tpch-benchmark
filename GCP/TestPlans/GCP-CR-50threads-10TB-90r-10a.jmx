@@ -11,7 +11,7 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="TPCH1TB-ConcurrentRun-GCP-50Threads-90%r-10%a-AgregateReport" enabled="true">
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="TPCH10TB-ConcurrentRun-GCP-50Threads-90%r-10%a-AgregateReport" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -92,7 +92,7 @@
           </elementProp>
           <elementProp name="TOKEN" elementType="Argument">
             <stringProp name="Argument.name">TOKEN</stringProp>
-            <stringProp name="Argument.value">Bearer ya29.Gl1uBpkwrF6fk14yR6tizzNn5GEc1PeLCwzELastnphotlzCc2tAL5dUCQyNPts06Rd6Vsud0PxcaDrfd5z2ZUdHk59YSwqjsqtzk4rit4vR8yeHPPUGwU04qSlxM88</stringProp>
+            <stringProp name="Argument.value">Bearer ya29.Gl1vBqZvq85SOFSewR3yv2N0TWouwT09H_mXdhigNNhvnVdmfLnjgVhpBt7e8jUWB3VMHddjBZPt0zbItJD9vnznvQ6RbwTO5TGLPzbIJnB9liaoj88MbyaQ39rnJFU</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="TIMEOUT_QUERY" elementType="Argument">
