@@ -1,0 +1,29 @@
+Creating summariser <summary>
+Created the tree successfully using GCP-PR-10TBv2.jmx
+Starting the test @ Sun Dec 09 01:28:15 UTC 2018 (1544318895014)
+Waiting for possible Shutdown/StopTestNow/Heapdump message on port 4446
+Creating summariser <summary>
+Created the tree successfully using GCP-PR-10TBv2.jmx
+Starting the test @ Sun Dec 09 01:31:06 UTC 2018 (1544319066238)
+Waiting for possible Shutdown/StopTestNow/Heapdump message on port 4447
+Creating summariser <summary>
+Created the tree successfully using GCP-PR-10TBv2.jmx
+Starting the test @ Sun Dec 09 01:43:48 UTC 2018 (1544319828649)
+Waiting for possible Shutdown/StopTestNow/Heapdump message on port 4445
+Creating summariser <summary>
+Created the tree successfully using GCP-PR-10TBv2.jmx
+Starting the test @ Sun Dec 09 02:12:26 UTC 2018 (1544321546887)
+Waiting for possible Shutdown/StopTestNow/Heapdump message on port 4446
+summary =      0 in 00:00:00 = ******/s Avg:     0 Min: 9223372036854775807 Max: -9223372036854775808 Err:     0 (0.00%)
+Tidying up ...    @ Sun Dec 09 02:18:54 UTC 2018 (1544321934918)
+... end of run
+summary =      0 in 00:00:00 = ******/s Avg:     0 Min: 9223372036854775807 Max: -9223372036854775808 Err:     0 (0.00%)
+Tidying up ...    @ Sun Dec 09 03:08:22 UTC 2018 (1544324902191)
+... end of run
+Creating summariser <summary>
+Created the tree successfully using /home/alolivares/genDataLoadBQ/GCP/TestPlans/GCP-CR-50threads-10TB-90r-10a.jmx
+Starting the test @ Tue Dec 11 00:51:18 UTC 2018 (1544489478623)
+Waiting for possible Shutdown/StopTestNow/Heapdump message on port 4445
+summary =      0 in 00:00:00 = ******/s Avg:     0 Min: 9223372036854775807 Max: -9223372036854775808 Err:     0 (0.00%)
+Tidying up ...    @ Tue Dec 11 01:27:04 UTC 2018 (1544491624286)
+... end of run
