@@ -87,12 +87,12 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="DATASET" elementType="Argument">
             <stringProp name="Argument.name">DATASET</stringProp>
-            <stringProp name="Argument.value">aol_tpch100</stringProp>
+            <stringProp name="Argument.value">aol_tpch10000</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="TOKEN" elementType="Argument">
             <stringProp name="Argument.name">TOKEN</stringProp>
-            <stringProp name="Argument.value">Bearer ya29.GlxtBgfc3F5fHKj-O2rIO132d7JNmF93OtkCg-RUqcQkrJzenSDtwXlaZWvsb8Nq9li4RF7BEczxxxra2ilp0LPVII4X7L5g5DH38_oqumRafAZFvdanx1h45Lvxqg</stringProp>
+            <stringProp name="Argument.value">Bearer ya29.Gl1xBk3xocsHqMrirQReL9lzxXOq_RcIm4Fz3pbSPYfu3J1RQlRMc3FK8xRnwhz0hum_sGZ1d_acQDBYURgyqBX4aDv99ei1sm6pl3yG7j7cZ8CHkXJ_si1NiPhh0oc</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="TIMEOUT_QUERY" elementType="Argument">
@@ -108,13 +108,13 @@
           </elementProp>
           <elementProp name="THREADS" elementType="Argument">
             <stringProp name="Argument.name">THREADS</stringProp>
-            <stringProp name="Argument.value">2500</stringProp>
+            <stringProp name="Argument.value">50</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
             <stringProp name="Argument.desc">NUMBER OF USERS</stringProp>
           </elementProp>
           <elementProp name="RAMP_UP" elementType="Argument">
             <stringProp name="Argument.name">RAMP_UP</stringProp>
-            <stringProp name="Argument.value">200</stringProp>
+            <stringProp name="Argument.value">5</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
             <stringProp name="Argument.desc">TIME IN SECONDS</stringProp>
           </elementProp>

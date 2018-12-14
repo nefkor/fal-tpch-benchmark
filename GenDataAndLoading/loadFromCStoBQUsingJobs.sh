@@ -1,5 +1,5 @@
 #!/bin/bash
-#Load big query using Bigquery jobs instead of transfer service
+#Load data using Bigquery Jobs instead of Transfer Service, but table and schemas are already created
 bq --location=US load --noreplace --source_format=CSV --field_delimiter '|' aol_tpch10000.lineitem gs://flb-fakedata/lineitem.tbl.*
 # 6,34 min - 7,74 TB
 bq --location=US load --noreplace --source_format=CSV --field_delimiter '|' aol_tpch10000.customer gs://flb-fakedata/customer.tbl*
